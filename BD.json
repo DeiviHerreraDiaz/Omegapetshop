@@ -1,0 +1,93 @@
+{
+  "Usuarios": [
+    {
+      "id": 1,
+      "tipodoc": "Cédula Ciudadanía",
+      "numdoc": "1033679469",
+      "fechaNac": "01/06/2004",
+      "nombre": "David",
+      "apellido": "Torres",
+      "Nacionalidad": "Colombiano",
+      "Contraseña": "123456"
+    },
+    {
+      "id": 2,
+      "tipodoc": "Cédula Ciudadanía",
+      "numdoc": "1013106777",
+      "fechaNac": "08/11/2005",
+      "nombre": "Dayana Alejandra",
+      "apellido": "Vargas Tobon",
+      "Nacionalidad": "Venezolano",
+      "Contraseña": "123"
+    },
+    {
+      "id": 3,
+      "tipodoc": "Cédula de extranjeria",
+      "numdoc": "1013416565",
+      "fechaNac": "08/11/2002",
+      "nombre": "Juan Sebastian",
+      "apellido": "Hernandez Diaz",
+      "Nacionalidad": "Colombiano",
+      "Contraseña": "123"
+    }
+  ],
+  "Tienda": [
+    {
+      "id": 1,
+      "Nombre": "PetShop",
+      "Direccion": "Calle 52 # 32-95",
+      "Telefono": "3044028836",
+      "Usuario": 1
+    },
+    {
+      "id": 2,
+      "Nombre": "las mascotas de lupita",
+      "Direccion": "Calle 100 # 22-30",
+      "Telefono": "123",
+      "Usuario": 2
+    },
+    {
+      "id": 3,
+      "Nombre": "Laika",
+      "Direccion": "Calle 22 # 10-15",
+      "Telefono": "546546446",
+      "Usuario": 3
+    },
+    {
+      "id": 4,
+      "Nombre": "Animalitos De Pedro",
+      "Direccion": "Calle 59 # 10-45",
+      "Telefono": "4646116",
+      "Usuario": 3
+    }
+  ],
+  "Productos": [
+    {
+      "id": 1,
+      "Nombre": "Mimaskot",
+      "Categoria": "Caninos",
+      "Fecha_Caducidad": "09/05/2027",
+      "Valor": 30000,
+      "Presentación": "Croquetas",
+      "Fabricante": "m"
+    },
+    {
+      "id": 2,
+      "Nombre": "Cat Chow",
+      "Categoria": "Felinos",
+      "Fecha_Caducidad": "04/10/2025",
+      "Valor": 23500,
+      "Presentación": "Purina",
+      "Fabricante": "Cat Chow"
+    },
+    {
+      "id": 3,
+      "Nombre": "Alimento para Hamster",
+      "Categoria": "Roedor",
+      "Fecha_Caducidad": "05/01/2023",
+      "Valor": 5000,
+      "Presentación": "Pepas",
+      "Fabricante": "RedKite"
+    }
+  ]
+}
