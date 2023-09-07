@@ -1,34 +1,24 @@
 {
   "Usuarios": [
     {
-      "id": 1,
-      "tipodoc": "Cédula Ciudadanía",
-      "numdoc": "1033679469",
-      "fechaNac": "01/06/2004",
-      "nombre": "David",
-      "apellido": "Torres",
-      "Nacionalidad": "Colombiano",
-      "Contraseña": "123456"
+      "tipodoc": "Cédula de extranjeria",
+      "numdoc": "1",
+      "fechaNac": "2023-09-11",
+      "nombre": "Deivi Stiven ",
+      "apellido": "Herrera",
+      "Nacionalidad": "Colombiana",
+      "Contraseña": "123",
+      "id": 1
     },
     {
-      "id": 2,
       "tipodoc": "Cédula Ciudadanía",
       "numdoc": "1013106777",
-      "fechaNac": "08/11/2005",
-      "nombre": "Dayana Alejandra",
-      "apellido": "Vargas Tobon",
-      "Nacionalidad": "Venezolano",
-      "Contraseña": "123"
-    },
-    {
-      "id": 3,
-      "tipodoc": "Cédula de extranjeria",
-      "numdoc": "1013416565",
-      "fechaNac": "08/11/2002",
-      "nombre": "Juan Sebastian",
-      "apellido": "Hernandez Diaz",
-      "Nacionalidad": "Colombiano",
-      "Contraseña": "123"
+      "fechaNac": "2023-09-19",
+      "nombre": "Dayana",
+      "apellido": "Vargas",
+      "Nacionalidad": "Colombiana",
+      "Contraseña": "123",
+      "id": 2
     }
   ],
   "Tienda": [
@@ -72,22 +62,22 @@
       "Fabricante": "m"
     },
     {
-      "id": 2,
-      "Nombre": "Cat Chow",
-      "Categoria": "Felinos",
-      "Fecha_Caducidad": "04/10/2025",
-      "Valor": 23500,
-      "Presentación": "Purina",
-      "Fabricante": "Cat Chow"
-    },
-    {
       "id": 3,
       "Nombre": "Alimento para Hamster",
       "Categoria": "Roedor",
       "Fecha_Caducidad": "05/01/2023",
-      "Valor": 5000,
+      "Valor": 23500,
       "Presentación": "Pepas",
       "Fabricante": "RedKite"
+    },
+    {
+      "id": 2,
+      "Nombre": "Cat Chow",
+      "Categoria": "Felinos",
+      "Fecha_Caducidad": "04/10/2025",
+      "Valor": 5000,
+      "Presentación": "Purina",
+      "Fabricante": "Cat Chow"
     }
   ]
 }
