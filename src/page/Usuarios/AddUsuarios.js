@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function Add() {
+function AddUsuarios() {
 
     const [inputData, setInputData] = useState({tipodoc:'Cédula Ciudadanía',numdoc:'',fechaNac:'',nombre:'',apellido:'',Nacionalidad:'',Contraseña:''})
 
@@ -16,7 +16,7 @@ function Add() {
         axios.post('http://localhost:3030/Usuarios', inputData)
         .then(res => {
             alert("Registro correctamente :D")
-            navigat('/');
+            navigat('/Usuarios');
 
         }).catch(err => console.log(err));
     }
@@ -86,4 +86,4 @@ function Add() {
   )
 }
 
-export default Add
+export default AddUsuarios

@@ -1,54 +1,40 @@
 {
   "Usuarios": [
     {
-      "tipodoc": "Cédula de extranjeria",
-      "numdoc": "1",
-      "fechaNac": "2023-09-11",
-      "nombre": "Deivi Stiven ",
-      "apellido": "Herrera",
-      "Nacionalidad": "Colombiana",
-      "Contraseña": "123",
-      "id": 1
-    },
-    {
       "tipodoc": "Cédula Ciudadanía",
-      "numdoc": "1013106777",
+      "numdoc": "1",
       "fechaNac": "2023-09-19",
-      "nombre": "Dayana",
+      "nombre": "Dayana Alejandra",
       "apellido": "Vargas",
-      "Nacionalidad": "Colombiana",
-      "Contraseña": "123",
+      "Nacionalidad": "Colombia",
+      "Contraseña": "123456",
       "id": 2
     }
   ],
   "Tienda": [
     {
       "id": 1,
-      "Nombre": "PetShop",
+      "Nombre": "Pet",
       "Direccion": "Calle 52 # 32-95",
-      "Telefono": "3044028836",
-      "Usuario": 1
+      "Telefono": "3044028836"
     },
     {
       "id": 2,
       "Nombre": "las mascotas de lupita",
       "Direccion": "Calle 100 # 22-30",
-      "Telefono": "123",
-      "Usuario": 2
+      "Telefono": "123"
     },
     {
       "id": 3,
       "Nombre": "Laika",
       "Direccion": "Calle 22 # 10-15",
-      "Telefono": "546546446",
-      "Usuario": 3
+      "Telefono": "546546446"
     },
     {
       "id": 4,
       "Nombre": "Animalitos De Pedro",
       "Direccion": "Calle 59 # 10-45",
-      "Telefono": "4646116",
-      "Usuario": 3
+      "Telefono": "4646116"
     }
   ],
   "Productos": [
@@ -59,25 +45,34 @@
       "Fecha_Caducidad": "09/05/2027",
       "Valor": 30000,
       "Presentación": "Croquetas",
-      "Fabricante": "m"
+      "Fabricante": "mmm"
     },
     {
-      "id": 3,
-      "Nombre": "Alimento para Hamster",
-      "Categoria": "Roedor",
-      "Fecha_Caducidad": "05/01/2023",
-      "Valor": 23500,
-      "Presentación": "Pepas",
-      "Fabricante": "RedKite"
-    },
-    {
-      "id": 2,
-      "Nombre": "Cat Chow",
+      "Nombre": "Gatsi",
       "Categoria": "Felinos",
-      "Fecha_Caducidad": "04/10/2025",
-      "Valor": 5000,
-      "Presentación": "Purina",
-      "Fabricante": "Cat Chow"
+      "Fecha_Caducidad": "2023-09-09",
+      "Valor": "5000",
+      "Presentación": "G",
+      "Fabricante": "GG",
+      "id": 2
+    },
+    {
+      "Nombre": "PetShop",
+      "Categoria": "Roedores",
+      "Fecha_Caducidad": "2023-09-11",
+      "Valor": "6000",
+      "Presentación": "dddd",
+      "Fabricante": "ddddd",
+      "id": 3
+    },
+    {
+      "Nombre": "Pet",
+      "Categoria": "p",
+      "Fecha_Caducidad": "2023-09-16",
+      "Valor": "6165165",
+      "Presentación": "fddf",
+      "Fabricante": "DEIVI",
+      "id": 4
     }
   ]
 }

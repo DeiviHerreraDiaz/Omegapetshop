@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Edit() {
+function EditUsuarios() {
 
     const {id} = useParams();
     const [data, setData] = useState([])
@@ -23,7 +23,7 @@ function Edit() {
         .then(res => {
 
             alert("Registro actualizado correctamente :D")
-            navigate('/')
+            navigate('/Usuarios')
         })
 
     }
@@ -88,5 +88,5 @@ function Edit() {
 
 }
 
-export default Edit;
+export default EditUsuarios;
 
