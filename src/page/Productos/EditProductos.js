@@ -23,7 +23,7 @@ function EditProductos() {
         .then(res => {
 
             alert("Registro actualizado correctamente :D")
-            navigate('/Tiendas')
+            navigate('/Productos')
         })
 
     }
@@ -68,7 +68,9 @@ function EditProductos() {
                 <div>
                     <label htmlFor="name">Fabricante:</label>
                     <input type="text" name='Fabricante' className='form-control' value={data.Fabricante} onChange={e => setData({...data, Fabricante: e.target.value})}/>
-                </div> <br/>
+                </div>
+
+                <br/>
                 <button className='btn btn-info'>Actualizar</button>
             </form>
 

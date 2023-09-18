@@ -1,0 +1,79 @@
+/* Productos.css */
+
+/* Estilo para el título */
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el subtítulo */
+.subtitulo {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilo para la tabla */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Estilo para las celdas del encabezado */
+.table-custom th {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilo para las celdas de datos */
+.table-custom td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+/* Estilo para las filas impares (opcional) */
+.table-custom tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Color de fondo de las filas impares */
+}
+
+/* Estilo para los botones de acción */
+.btn-success,
+.btn-danger {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 4px;
+}
+
+/* Estilo para el botón "Add +" */
+.btn-primary {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+/* Estilo para el botón "Cerrar Sesión" */
+.btn-danger {
+    background-color: #dc3545; /* Color de fondo del botón de cerrar sesión */
+    border-color: #dc3545; /* Color del borde del botón de cerrar sesión */
+}
+
+/* Estilo para el botón "Update" */
+.btn-success {
+    background-color: #28a745; /* Color de fondo del botón de actualizar */
+    border-color: #28a745; /* Color del borde del botón de actualizar */
+}
+
+/* Estilo para la tabla con esquinas redondeadas */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 10px; /* Añadir esquinas redondeadas */
+    overflow: hidden; /* Para que los bordes redondeados se muestren correctamente */
+}

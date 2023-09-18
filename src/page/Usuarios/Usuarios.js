@@ -1,11 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Cookies from 'universal-cookie';
 
 function Usuarios() {
     const [columns, setColumns] = useState([]);
     const [records, setRecords] = useState([]);
     const navigate = useNavigate();
+    const cookies = new Cookies();
+
 
     useEffect(() => {
         axios.get('http://localhost:3030/Usuarios')
@@ -28,6 +31,11 @@ function Usuarios() {
                 .catch(err => console.log(err));
         }
     };
+
+    console.log('id' + cookies.get('id'));
+    console.log('nombre' + cookies.get('nombre'));
+    console.log('apellido' + cookies.get('apellido'));
+    console.log('Contraseña' + cookies.get('Contraseña'));
 
     return (
         <div className="container mt-5">

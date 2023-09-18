@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Cookies from 'universal-cookie';
 
-const baseUrl = "http://localhost:3030/Usuarios";
+const baseUrl = "http://localhost:3030/Tienda";
 const cookies = new Cookies();
 
-const Login = () => {
+const LoginTiendas = () => {
   const [form, setForm] = useState({
-    numdoc: '',
-    Contraseña: ''
+    Nombre: '',
+    Num_acceso: ''
   });
 
   const handleChange = (e) => {
@@ -23,44 +23,36 @@ const Login = () => {
     try {
       const response = await axios.get(baseUrl, {
         params: {
-          numdoc: form.numdoc,
-          Contraseña: form.Contraseña
+          Nombre: form.Nombre,
+          Num_acceso: form.Num_acceso
         }
       });
-      console.log("Datos enviados:", form);
-      console.log("Respuesta del servidor:", response.data);
 
       if (response.data.length > 0) {
         var respuesta = response.data[0];
         cookies.set('id', respuesta.id, { path: "/" });
-        cookies.set('numdoc', respuesta.numdoc, { path: "/" });
-        cookies.set('nombre', respuesta.nombre, { path: "/" });
-        cookies.set('apellido', respuesta.apellido, { path: "/" });
+        cookies.set('Nombre', respuesta.Nombre, { path: "/" });
 
-        alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido}`);
 
-        window.location.href="/Index";
+        cookies.set('TiendaId', respuesta.id, { path: "/" });
 
+        alert(`Bienvenido ${respuesta.Nombre}`);
+
+        window.location.href = "/Productos";
       } else {
-        alert('El usuario o la contraseña no son correctos');
+        alert('Tienda no existente o credenciales incorrectas');
       }
     } catch (error) {
       console.log(error);
     }
   }
 
-  console.log('id' + cookies.get('id'));
-  console.log('nombre' + cookies.get('nombre'));
-  console.log('apellido' + cookies.get('apellido'));
-  console.log('Contraseña' + cookies.get('Contraseña'));
-  console.log('numdoc' + cookies.get('numdoc'));
-
   return (
       <div className="hold-transition login-page">
         <div className="login-box">
           <div className="login-logo">
             <Link to="#">
-              <b>Inicio de </b>Sesión
+              <b>Inicio de </b>Sesión TIENDAS
             </Link>
           </div>
 
@@ -73,9 +65,9 @@ const Login = () => {
                   <input
                       type="text"
                       className="form-control"
-                      placeholder="Documento"
-                      id="numdoc"
-                      name="numdoc"
+                      placeholder="Nombre"
+                      id="Nombre"
+                      name="Nombre"
                       onChange={handleChange}
                   />
                   <div className="input-group-append">
@@ -89,9 +81,9 @@ const Login = () => {
                   <input
                       type="password"
                       className="form-control"
-                      placeholder="Contraseña"
-                      id="Contraseña"
-                      name="Contraseña"
+                      placeholder="Número de acceso"
+                      id="Num_acceso"
+                      name="Num_acceso"
                       onChange={handleChange}
                   />
                   <div className="input-group-append">
@@ -118,4 +110,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginTiendas;
