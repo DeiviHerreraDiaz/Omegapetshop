@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import "./Style.css";
 
 function Tiendas() {
     const [columns, setColumns] = useState([]);
@@ -31,8 +32,14 @@ function Tiendas() {
 
     return (
         <div className="container mt-5">
+
+            <h1 className="titulo">TIENDAS</h1>
+            <figcaption className="subtitulo">
+                CONSIGUE TUS PRODUCTOS EN NUESTRAS DIFERENTES <cite title="Source Title">TIENDAS</cite>
+            </figcaption>
+
             <div className="text-end"><Link to="/createTiendas" className="btn btn-primary">Add +</Link></div>
-            <table className="table">
+            <table className="table-custom">
                 <thead>
                 <tr>
                     {columns.map((c, i) => (
@@ -49,7 +56,8 @@ function Tiendas() {
                         ))}
                         <td>
                             <Link to={`/updateTiendas/${d.id}`} className="btn btn-sm btn-success">Update</Link>
-                            <button onClick={() => handleDelete(d.id)} className="btn btn-sm ms-1 btn-danger">Delete</button>
+                            <button onClick={() => handleDelete(d.id)} className="btn btn-sm ms-1 btn-danger">Delete
+                            </button>
                         </td>
                     </tr>
                 ))}

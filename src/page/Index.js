@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
 import Cookies from 'universal-cookie';
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Style.css"
 
 const cookies = new Cookies();
 
@@ -10,11 +11,11 @@ const Index = () => {
     const navigate = useNavigate();
 
     const cerrarSesion = () => {
-        cookies.remove('id', { path: "/" });
-        cookies.remove('nombre', { path: "/" });
-        cookies.remove('apellido', { path: "/" });
-        cookies.remove('Contraseña', { path: "/" });
-        cookies.remove('numdoc', { path: "/" });
+        cookies.remove('id', {path: "/"});
+        cookies.remove('nombre', {path: "/"});
+        cookies.remove('apellido', {path: "/"});
+        cookies.remove('Contraseña', {path: "/"});
+        cookies.remove('numdoc', {path: "/"});
         window.location.href = '/index';
     }
 
@@ -45,13 +46,15 @@ const Index = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <Link className="navbar-brand" to="/">OMEGAPETSHOP</Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                   data-toggle="dropdown">
                                     Tienda
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -74,16 +77,20 @@ const Index = () => {
 
             <div className="container mt-4">
                 <div className="jumbotron">
-                    <h2>TIENDA DE MASCOTAS :D</h2>
-                    <p>Esta es una página en la que puedes registrar una tienda y agregar tus productos para que las personas los puedan comprar y obtener información sobre tu tienda.</p>
-                    <p><a className="btn btn-primary btn-lg" href="#">Leer más</a></p>
+                    <h1 className="display-4">¡Bienvenido a OMEGAPETSHOP!</h1>
+                    <p className="lead">Tu tienda favorita de mascotas 🐶🐱</p>
+                    <p>Descubre productos de alta calidad para tus mascotas y crea tu propia tienda.</p>
+                    <p>Registra tu tienda y agrega tus productos para que los amantes de las mascotas puedan
+                        comprarlos.</p>
+                    <p>¡Explora nuestra amplia selección de productos para mimar a tus mascotas!</p>
                 </div>
 
-                <h1 className="text-center">PRODUCTOS</h1>
+                <h2 className="text-center">PRODUCTOS</h2>
 
-                <div className="form-group">
-                    <label>Filtrar por Tienda:</label>
+                <div className="form-group text-center">
+                    <label htmlFor="filtroTienda">Filtrar por Tienda:</label>
                     <select
+                        id="filtroTienda"
                         className="form-control"
                         value={filtroTienda}
                         onChange={(e) => setFiltroTienda(e.target.value)}
@@ -128,7 +135,9 @@ const Index = () => {
                                             </button>
                                         ) : (
                                             <div className="alert alert-danger">
-                                                <strong>Cuidado!</strong> Necesitas <Link to="/login" className="alert-link">Iniciar Sesión</Link>.
+                                                <strong>Cuidado!</strong> Necesitas <Link to="/login"
+                                                                                          className="alert-link">Iniciar
+                                                Sesión</Link>.
                                             </div>
                                         )}
                                     </div>

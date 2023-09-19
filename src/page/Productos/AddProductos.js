@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import "./Style.css"
 
@@ -20,8 +20,8 @@ function AddProductos() {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setInputData({ ...inputData, [name]: value });
+        const {name, value} = e.target;
+        setInputData({...inputData, [name]: value});
     };
 
     const handleSubmit = async (event) => {

@@ -1,8 +1,9 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
 import Cookies from 'universal-cookie';
 import "./Style.css"
+
 const cookies = new Cookies();
 
 function Productos() {
@@ -12,8 +13,8 @@ function Productos() {
 
     const cerrarSesion = () => {
 
-        cookies.remove('id', { path: "/" });
-        cookies.remove('Nombre', { path: "/" });
+        cookies.remove('id', {path: "/"});
+        cookies.remove('Nombre', {path: "/"});
 
         navigate("/index");
     };
@@ -81,7 +82,8 @@ function Productos() {
                         ))}
                         <td>
                             <Link to={`/updateProductos/${d.id}`} className="btn btn-sm btn-success">Update</Link>
-                            <button onClick={() => handleDelete(d.id)} className="btn btn-sm ms-1 btn-danger">Delete</button>
+                            <button onClick={() => handleDelete(d.id)} className="btn btn-sm ms-1 btn-danger">Delete
+                            </button>
                         </td>
                     </tr>
                 ))}

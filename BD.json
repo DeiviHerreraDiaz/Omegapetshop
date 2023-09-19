@@ -38,10 +38,10 @@
     },
     {
       "tipodoc": "Cédula Ciudadanía",
-      "numdoc": "111111",
-      "fechaNac": "2023-09-15",
-      "nombre": "Luissss",
-      "apellido": "asadsad",
+      "numdoc": "654654646464",
+      "fechaNac": "2023-09-07",
+      "nombre": "Andres",
+      "apellido": "Rodriguez",
       "Contraseña": "123",
       "id": 6
     }
@@ -77,7 +77,7 @@
     },
     {
       "Nombre": "PRUEBA",
-      "Direccion": "PRUEBA",
+      "Direccion": "Cualquiera",
       "Telefono": "123",
       "Num_acceso": "123",
       "id": 5
@@ -285,24 +285,14 @@
       "id_tienda": 4
     },
     {
-      "Nombre": "PRUEBA",
-      "Categoria": "PRUEBA",
+      "Nombre": "PRUEBA PRODUCTOS",
+      "Categoria": "Felinos",
       "Fecha_Caducidad": "2023-09-16",
-      "Valor": "211123",
-      "Presentación": "PRUEBA",
-      "Fabricante": "PRUEBA",
-      "id_tienda": 3,
-      "id": 21
-    },
-    {
-      "Nombre": "PRUEBA",
-      "Categoria": "PRUEBA",
-      "Fecha_Caducidad": "2023-09-22",
-      "Valor": "2222",
-      "Presentación": "PRUEBA",
-      "Fabricante": "PRUEBA",
+      "Valor": "5000",
+      "Presentación": "Carne",
+      "Fabricante": "Cristian",
       "id_tienda": 5,
-      "id": 22
+      "id": 21
     }
   ],
   "Venta": [
@@ -320,27 +310,45 @@
       "numdoc": "1033679469",
       "nombre": "Deivi",
       "apellido": "Stiven",
-      "id_producto": "3",
+      "id_producto": "2",
       "cantidad": "2",
       "id": 2
     },
     {
       "tipodoc": "Cédula Ciudadanía",
-      "numdoc": "123456789",
-      "nombre": "Juan",
-      "apellido": "Hernandez",
+      "numdoc": "654654646464",
+      "nombre": "Andres",
+      "apellido": "Rodriguez",
       "id_producto": "3",
       "cantidad": "2",
       "id": 3
     },
     {
       "tipodoc": "Cédula Ciudadanía",
+      "numdoc": "1",
+      "nombre": "Dayana Alejandra",
+      "apellido": "Vargas",
+      "id_producto": "23",
+      "cantidad": "5",
+      "id": 4
+    },
+    {
+      "tipodoc": "Cédula Ciudadanía",
       "numdoc": "1033679469",
       "nombre": "Deivi",
       "apellido": "Stiven",
-      "id_producto": "22",
+      "id_producto": "18",
       "cantidad": "2",
-      "id": 4
+      "id": 5
+    },
+    {
+      "tipodoc": "Cédula Ciudadanía",
+      "numdoc": "1",
+      "nombre": "Dayana Alejandra",
+      "apellido": "Vargas",
+      "id_producto": "21",
+      "cantidad": "5",
+      "id": 6
     }
   ]
 }

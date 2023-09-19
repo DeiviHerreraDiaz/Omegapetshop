@@ -1,14 +1,14 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
 import Cookies from 'universal-cookie';
+import "./Style.css";
 
 function Usuarios() {
     const [columns, setColumns] = useState([]);
     const [records, setRecords] = useState([]);
     const navigate = useNavigate();
     const cookies = new Cookies();
-
 
     useEffect(() => {
         axios.get('http://localhost:3030/Usuarios')
@@ -39,8 +39,17 @@ function Usuarios() {
 
     return (
         <div className="container mt-5">
-            <div className="text-end"><Link to="/create" className="btn btn-primary">Add +</Link></div>
-            <table className="table">
+
+
+            <h1 className="titulo">USUARIOS</h1>
+
+            <figcaption className="subtitulo">
+                CONSULTA <cite title="Source Title">GENERAL</cite>
+            </figcaption>
+
+
+            <div className="text-end"><Link to="/createUsuarios" className="btn btn-primary">Add +</Link></div>
+            <table className="table-custom">
                 <thead>
                 <tr>
                     {columns.map((c, i) => (
@@ -57,7 +66,8 @@ function Usuarios() {
                         ))}
                         <td>
                             <Link to={`/updateUsuarios/${d.id}`} className="btn btn-sm btn-success">Update</Link>
-                            <button onClick={() => handleDelete(d.id)} className="btn btn-sm ms-1 btn-danger">Delete</button>
+                            <button onClick={() => handleDelete(d.id)} className="btn btn-sm ms-1 btn-danger">Delete
+                            </button>
                         </td>
                     </tr>
                 ))}

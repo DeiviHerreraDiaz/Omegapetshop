@@ -1,6 +1,6 @@
 import axios from 'axios'
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 function AddUsuarios() {
     const [inputData, setInputData] = useState({
@@ -52,27 +52,32 @@ function AddUsuarios() {
 
                     <div className="form-group">
                         <label htmlFor="numdoc">Documento:</label>
-                        <input type="text" name='numdoc' className='form-control' onChange={e => setInputData({ ...inputData, numdoc: e.target.value })} />
+                        <input type="text" name='numdoc' className='form-control'
+                               onChange={e => setInputData({...inputData, numdoc: e.target.value})}/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="fechaNac">Fecha de nacimiento:</label>
-                        <input type="date" name='fechaNac' className='form-control' onChange={e => setInputData({ ...inputData, fechaNac: e.target.value })} />
+                        <input type="date" name='fechaNac' className='form-control'
+                               onChange={e => setInputData({...inputData, fechaNac: e.target.value})}/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="nombre">Nombre:</label>
-                        <input type="text" name='nombre' className='form-control' onChange={e => setInputData({ ...inputData, nombre: e.target.value })} />
+                        <input type="text" name='nombre' className='form-control'
+                               onChange={e => setInputData({...inputData, nombre: e.target.value})}/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="apellido">Apellido:</label>
-                        <input type="text" name='apellido' className='form-control' onChange={e => setInputData({ ...inputData, apellido: e.target.value })} />
+                        <input type="text" name='apellido' className='form-control'
+                               onChange={e => setInputData({...inputData, apellido: e.target.value})}/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="Contraseña">Contraseña:</label>
-                        <input type="password" name='Contraseña' className='form-control' onChange={e => setInputData({ ...inputData, Contraseña: e.target.value })} />
+                        <input type="password" name='Contraseña' className='form-control'
+                               onChange={e => setInputData({...inputData, Contraseña: e.target.value})}/>
                     </div>
 
                     <button className='btn btn-info'>Agregar</button>

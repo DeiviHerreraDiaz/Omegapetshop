@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import Usuarios from './page/Usuarios/Usuarios';
 import AddUsuarios from './page/Usuarios/AddUsuarios';
 import EditUsuarios from './page/Usuarios/EditUsuarios';
@@ -20,40 +20,40 @@ const cookies = new Cookies();
 
 function AppRouter() {
 
-  const user = cookies.get('id');
+    const user = cookies.get('id');
 
-  return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/Index" element={<Index/>} />
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/Index" element={<Index/>}/>
 
-          {/* INICIO DE SESIÓN */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/loginTiendas" element={<LoginTiendas />} />
+                {/* INICIO DE SESIÓN */}
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/loginTiendas" element={<LoginTiendas/>}/>
 
-          {/* USUARIOS */}
-          <Route path="/Usuarios" element={user ? <Usuarios /> : <Navigate to="/login" />} />
-          <Route path ='/createUsuarios' element={<AddUsuarios/>}/>
-          <Route path="/updateUsuarios/:id" element={user ? <EditUsuarios /> : <Navigate to="/login" />} />
+                {/* USUARIOS */}
+                <Route path="/Usuarios" element={user ? <Usuarios/> : <Navigate to="/login"/>}/>
+                <Route path='/createUsuarios' element={<AddUsuarios/>}/>
+                <Route path="/updateUsuarios/:id" element={user ? <EditUsuarios/> : <Navigate to="/login"/>}/>
 
-          {/* PRODUCTOS */}
-          <Route path="/Productos" element={user ? <Productos /> : <Navigate to="/login" />} />
-          <Route path="/createProductos" element={user ? <AddProductos /> : <Navigate to="/login" />} />
-          <Route path="/updateProductos/:id" element={user ? <EditProductos /> : <Navigate to="/login" />} />
+                {/* PRODUCTOS */}
+                <Route path="/Productos" element={user ? <Productos/> : <Navigate to="/login"/>}/>
+                <Route path="/createProductos" element={user ? <AddProductos/> : <Navigate to="/login"/>}/>
+                <Route path="/updateProductos/:id" element={user ? <EditProductos/> : <Navigate to="/login"/>}/>
 
-          {/* TIENDAS */}
-          <Route path="/Tiendas" element={user ? <Tiendas /> : <Navigate to="/login" />} />
-          <Route path="/createTiendas" element={<AddTiendas />} />
-          <Route path="/updateTiendas/:id" element={user ? <EditTiendas /> : <Navigate to="/login" />} />
+                {/* TIENDAS */}
+                <Route path="/Tiendas" element={user ? <Tiendas/> : <Navigate to="/login"/>}/>
+                <Route path="/createTiendas" element={<AddTiendas/>}/>
+                <Route path="/updateTiendas/:id" element={user ? <EditTiendas/> : <Navigate to="/login"/>}/>
 
-          {/*VENTAS*/}
+                {/*VENTAS*/}
 
-          <Route path="/createVenta" element={user ? <AddVenta /> : <Navigate to="/login" />} />
+                <Route path="/createVenta" element={user ? <AddVenta/> : <Navigate to="/login"/>}/>
 
 
-        </Routes>
-      </BrowserRouter>
-  );
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default AppRouter;
